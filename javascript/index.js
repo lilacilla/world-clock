@@ -119,7 +119,15 @@ function updateCity(event) {
   //console.log(cityTime.format("MMMM Do YYYY"));
   let citiesElement = document.querySelector("#cities");
 
-  if (cityTime.format("h:mm:ss [<small>]A[</small>]").includes("AM")) {
+  if (
+    (cityTime.format("h:mm:ss [<small>]A[</small>]").includes("AM") &&
+      cityTime.format("h") >= 6 &&
+      cityTime.format("h") <= 11) ||
+    (cityTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+      cityTime.format("h") <= 5) ||
+    (cityTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+      cityTime.format("h") == 12)
+  ) {
     citiesElement.innerHTML = `
   <div class="city">
         
