@@ -12,7 +12,15 @@ function updateTime() {
 
     let losAngelesIconChange =
       losAngelesElement.querySelector(".daylight-icon");
-    if (losAngelesTime.format("h:mm:ss [<small>]A[</small>]").includes("AM")) {
+    if (
+      (losAngelesTime.format("h:mm:ss [<small>]A[</small>]").includes("AM") &&
+        losAngelesTime.format("h") >= 6 &&
+        losAngelesTime.format("h") <= 11) ||
+      (losAngelesTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+        losAngelesTime.format("h") <= 5) ||
+      (losAngelesTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+        losAngelesTime.format("h") == 12)
+    ) {
       losAngelesIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_day </span>`;
     } else {
       losAngelesIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_night </span>`;
@@ -31,7 +39,15 @@ function updateTime() {
     );
 
     let parisIconChange = parisElement.querySelector(".daylight-icon");
-    if (parisTime.format("h:mm:ss [<small>]A[</small>]").includes("AM")) {
+    if (
+      (parisTime.format("h:mm:ss [<small>]A[</small>]").includes("AM") &&
+        parisTime.format("h") >= 6 &&
+        parisTime.format("h") <= 11) ||
+      (parisTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+        parisTime.format("h") <= 5) ||
+      (parisTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+        parisTime.format("h") == 12)
+    ) {
       parisIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_day </span>`;
     } else {
       parisIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_night </span>`;
@@ -50,14 +66,22 @@ function updateTime() {
     );
     console.log(singaporeTime);
     let singaporeIconChange = singaporeElement.querySelector(".daylight-icon");
-    if (singaporeTime.format("h:mm:ss [<small>]A[</small>]").includes("AM")) {
+    if (
+      (singaporeTime.format("h:mm:ss [<small>]A[</small>]").includes("AM") &&
+        singaporeTime.format("h") >= 6 &&
+        singaporeTime.format("h") <= 11) ||
+      (singaporeTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+        singaporeTime.format("h") <= 5) ||
+      (singaporeTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+        singaporeTime.format("h") == 12)
+    ) {
       singaporeIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_day </span>`;
     } else {
       singaporeIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_night </span>`;
     }
   }
 
-  // Jamaica
+  // Port of Spain
   let portSpainElement = document.querySelector("#port-spain");
   if (portSpainElement) {
     let portSpainDateElement = portSpainElement.querySelector(".date");
@@ -69,7 +93,15 @@ function updateTime() {
     );
     console.log(portSpainTime);
     let portSpainIconChange = portSpainElement.querySelector(".daylight-icon");
-    if (portSpainTime.format("h:mm:ss [<small>]A[</small>]").includes("AM")) {
+    if (
+      (portSpainTime.format("h:mm:ss [<small>]A[</small>]").includes("AM") &&
+        portSpainTime.format("h") >= 6 &&
+        portSpainTime.format("h") <= 11) ||
+      (portSpainTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+        portSpainTime.format("h") <= 5) ||
+      (portSpainTime.format("h:mm:ss [<small>]A[</small>]").includes("PM") &&
+        portSpainTime.format("h") == 12)
+    ) {
       portSpainIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_day </span>`;
     } else {
       portSpainIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_night </span>`;
