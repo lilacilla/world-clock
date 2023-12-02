@@ -58,21 +58,21 @@ function updateTime() {
   }
 
   // Jamaica
-  let jamaicaElement = document.querySelector("#jamaica");
-  if (jamaicaElement) {
-    let jamaicaDateElement = jamaicaElement.querySelector(".date");
-    let jamaicaTimeElement = jamaicaElement.querySelector(".time");
-    let jamaicaTime = moment().tz("America/Jamaica");
-    jamaicaDateElement.innerHTML = jamaicaTime.format("MMMM Do YYYY");
-    jamaicaTimeElement.innerHTML = jamaicaTime.format(
+  let portSpainElement = document.querySelector("#port-spain");
+  if (portSpainElement) {
+    let portSpainDateElement = portSpainElement.querySelector(".date");
+    let portSpainTimeElement = portSpainElement.querySelector(".time");
+    let portSpainTime = moment().tz("America/Port_of_Spain");
+    portSpainDateElement.innerHTML = portSpainTime.format("MMMM Do YYYY");
+    portSpainTimeElement.innerHTML = portSpainTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
-    console.log(jamaicaTime);
-    let jamaicaIconChange = jamaicaElement.querySelector(".daylight-icon");
-    if (jamaicaTime.format("h:mm:ss [<small>]A[</small>]").includes("AM")) {
-      jamaicaIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_day </span>`;
+    console.log(portSpainTime);
+    let portSpainIconChange = portSpainElement.querySelector(".daylight-icon");
+    if (portSpainTime.format("h:mm:ss [<small>]A[</small>]").includes("AM")) {
+      portSpainIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_day </span>`;
     } else {
-      jamaicaIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_night </span>`;
+      portSpainIconChange.innerHTML = `<span class="material-symbols-outlined"> clear_night </span>`;
     }
   }
 }
