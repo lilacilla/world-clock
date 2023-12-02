@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>World Clock</title>
   </head>
   <body>
@@ -17,19 +25,46 @@
         <option value="Europe/London">London</option>
         <option value="America/New_York">New York</option>
         <option value="Pacific/Auckland">Auckland</option>
+        <option value="Africa/Kinshasa">Kinshasa</option>
       </select>
 
       <div id="cities">
         <div class="city" id="los-angeles">
-          <div>
+          <div class="daylight-icon" id="daylight-icon">
+            <span class="material-symbols-outlined"> clear_night </span>
+          </div>
+          <div class="city-details">
             <h2>Los Angeles</h2>
             <div class="date"></div>
           </div>
           <div class="time"></div>
         </div>
         <div class="city" id="paris">
-          <div>
+          <div class="daylight-icon" id="daylight-icon">
+            <span class="material-symbols-outlined"> clear_night </span>
+          </div>
+          <div class="city-details">
             <h2>Paris</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="singapore">
+          <div class="daylight-icon" id="daylight-icon">
+            <span class="material-symbols-outlined"> clear_day </span>
+          </div>
+          <div class="city-details">
+            <h2>Singapore</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="jamaica">
+          <div class="daylight-icon" id="daylight-icon">
+            <span class="material-symbols-outlined"> clear_day </span>
+          </div>
+          <div class="city-details">
+            <h2>Jamaica</h2>
             <div class="date"></div>
           </div>
           <div class="time"></div>
