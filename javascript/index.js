@@ -64,7 +64,6 @@ function updateTime() {
     singaporeTimeElement.innerHTML = singaporeTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
-    console.log(singaporeTime);
     let singaporeIconChange = singaporeElement.querySelector(".daylight-icon");
     if (
       (singaporeTime.format("h:mm:ss [<small>]A[</small>]").includes("AM") &&
@@ -91,7 +90,6 @@ function updateTime() {
     portSpainTimeElement.innerHTML = portSpainTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
-    console.log(portSpainTime);
     let portSpainIconChange = portSpainElement.querySelector(".daylight-icon");
     if (
       (portSpainTime.format("h:mm:ss [<small>]A[</small>]").includes("AM") &&
@@ -116,7 +114,6 @@ function updateCity(event) {
   }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
-  //console.log(cityTime.format("MMMM Do YYYY"));
   let citiesElement = document.querySelector("#cities");
 
   if (
